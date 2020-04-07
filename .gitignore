@@ -1,2 +1,6 @@
-build/*
-build/*.*
+build/*.ninja
+build/.*
+build/*.cmake
+build/*.txt
+build/*.log
+build/CMakeFiles/*
