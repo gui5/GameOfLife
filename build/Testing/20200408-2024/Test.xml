@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20200408-2024-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.17.0"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="archlx"
+	OSRelease="5.6.2-arch1-2"
+	OSVersion="#1 SMP PREEMPT Sun, 05 Apr 2020 05:13:14 +0000"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="142"
+	ProcessorCacheSize="8192"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="7372"
+	TotalPhysicalMemory="15730"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2787.16"
+	>
+	<Testing>
+		<StartDateTime>Apr 08 22:34 CEST</StartDateTime>
+		<StartTestTime>1586378081</StartTestTime>
+		<TestList>
+			<Test>./SeedTest</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>SeedTest</Name>
+			<Path>.</Path>
+			<FullName>./SeedTest</FullName>
+			<FullCommandLine>/home/gui/Projects/cpp/gof/build/seedtest</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.00356355</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/gui/Projects/cpp/gof/build/seedtest</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value></Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Apr 08 22:34 CEST</EndDateTime>
+		<EndTestTime>1586378081</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

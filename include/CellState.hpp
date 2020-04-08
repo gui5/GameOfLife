@@ -3,9 +3,6 @@
 
 enum class CellState { dead, alive };
 
-enum class Trigger {
-    live,
-    die
-}
+enum class Trigger { live, die }
 
 #endif

@@ -1,0 +1,18 @@
+Start testing: Apr 08 22:34 CEST
+----------------------------------------------------------
+1/1 Testing: SeedTest
+1/1 Test: SeedTest
+Command: "/home/gui/Projects/cpp/gof/build/seedtest"
+Directory: /home/gui/Projects/cpp/gof/build
+"SeedTest" start time: Apr 08 22:34 CEST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SeedTest" end time: Apr 08 22:34 CEST
+"SeedTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 08 22:34 CEST

@@ -3,6 +3,8 @@
     "files.associations": {
         "*.tcc": "cpp",
         "atomic": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "random": "cpp",
+        "array": "cpp"
     }
 }   
