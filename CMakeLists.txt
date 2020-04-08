@@ -6,9 +6,6 @@ project(GOF VERSION 0.0.0.1
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 
-# set(VCPKG_INCLUDE "/home/gui/Projects/cpp/lib/vcpkg/installed/x64-linux/include")
-# set(VCPKG_LIB "/home/gui/Projects/cpp/lib/vcpkg/installed/x64-linux/lib")
-
 find_package(Threads REQUIRED)
 find_package(OpenGL REQUIRED) 
 
