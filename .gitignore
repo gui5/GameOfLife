@@ -4,3 +4,7 @@ build/*.cmake
 build/*.txt
 build/*.log
 build/CMakeFiles/*
+build/*.json
+build/Testing/*
+build/gof
+build/seedtest
