@@ -11,7 +11,7 @@ struct Cell {
   unsigned pos_y;
   CellState state;
 
-  Cell *_neighbours[8];
+  //Cell *_neighbours[8];
 };
 
 #endif

@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 
+#include <CellFactory.hpp>
 #include <fps.hpp>
 
 int main(int argc, char **argv) {
