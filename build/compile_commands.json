@@ -1,0 +1,19 @@
+[
+{
+  "directory": "/home/gui/Projects/cpp/gof/build",
+  "command": "/usr/bin/g++  -DFLAC__NO_DLL -DSFML_STATIC -I../include -isystem /home/gui/Projects/cpp/lib/vcpkg/installed/x64-linux/include  -O3 -DNDEBUG   -pthread -std=c++17 -o CMakeFiles/seedtest.dir/test/SeedTest.cpp.o -c /home/gui/Projects/cpp/gof/test/SeedTest.cpp",
+  "file": "/home/gui/Projects/cpp/gof/test/SeedTest.cpp"
+},
+
+{
+  "directory": "/home/gui/Projects/cpp/gof/build",
+  "command": "/usr/bin/g++  -DFLAC__NO_DLL -DSFML_STATIC -I../include -isystem /home/gui/Projects/cpp/lib/vcpkg/installed/x64-linux/include  -O3 -DNDEBUG   -pthread -std=c++17 -o CMakeFiles/gof.dir/src/main.cpp.o -c /home/gui/Projects/cpp/gof/src/main.cpp",
+  "file": "/home/gui/Projects/cpp/gof/src/main.cpp"
+},
+
+{
+  "directory": "/home/gui/Projects/cpp/gof/build",
+  "command": "/usr/bin/g++  -DFLAC__NO_DLL -DSFML_STATIC -I../include -isystem /home/gui/Projects/cpp/lib/vcpkg/installed/x64-linux/include  -O3 -DNDEBUG   -pthread -std=c++17 -o CMakeFiles/cellfactorytest.dir/test/CellFactoryTest.cpp.o -c /home/gui/Projects/cpp/gof/test/CellFactoryTest.cpp",
+  "file": "/home/gui/Projects/cpp/gof/test/CellFactoryTest.cpp"
+}
+]

@@ -1,0 +1,11 @@
+[
+    {
+    "name":"GCC",
+    "compilers":{
+        "CC":"gcc",
+        "CXX":"g++"
+    },
+    
+    "toolchainFile": "/home/gui/Projects/cpp/lib/vcpkg/scripts/buildsystems/vcpkg.cmake"
+    }
+]
