@@ -6,5 +6,7 @@ build/*.log
 build/CMakeFiles/*
 build/*.json
 build/Testing/*
+build/Testing
 build/gof
 build/seedtest
+/bin/*

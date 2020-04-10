@@ -4,24 +4,25 @@
 #include "Cell.hpp"
 #include "Seed.hpp"
 
+#include <array>
 #include <cstring>
-#include <vector>
 
 struct CellFactory {
-  template <unsigned width, unsigned height>
-  static std::vector<Cell> initialize(Seed &seed) {
 
-    std::vector<Cell> cells;
+  template <int width, int height>
+  static std::array<std::array<Cell*, height>, width> initialize(Seed &&seed) {
+
+    std::array<std::array<Cell*, height>, width> cells;
     char sd[width][height];
     memset(&sd, 0, sizeof(sd));
     if (seed.generate_seed(sd)) {
       for (unsigned i = 0; i < width; i++) {
         for (unsigned j = 0; j < height; j++) {
-          cells.emplace_back(i, j, state_cast(sd[i][j]));
+          cells[i][j] = new Cell(CellPosition(i, j), state_cast(sd[i][j]));
         }
       }
     }
-    return std::move(cells);
+    return cells;
   }
 
   CellFactory(const CellFactory &) = delete;
