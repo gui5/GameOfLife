@@ -6,19 +6,19 @@
 
 #include <array>
 #include <cstring>
+#include <memory>
 
 struct CellFactory {
 
   template <int width, int height>
-  static std::array<std::array<Cell*, height>, width> initialize(Seed &&seed) {
-
-    std::array<std::array<Cell*, height>, width> cells;
-    char sd[width][height];
-    memset(&sd, 0, sizeof(sd));
-    if (seed.generate_seed(sd)) {
+  static PCellArray<width, height> initialize(Seed &&seed) {
+    PCellArray<width, height> cells;
+    RamdomCellSateArray<width, height> sd;
+    // memset(&sd, 0, sizeof(sd));
+    if (seed.generate_seed<width, height>(sd)) {
       for (unsigned i = 0; i < width; i++) {
         for (unsigned j = 0; j < height; j++) {
-          cells[i][j] = new Cell(CellPosition(i, j), state_cast(sd[i][j]));
+          cells[i][j] = std::make_unique<Cell>(CellPosition(i, j), sd[i][j]);
         }
       }
     }
