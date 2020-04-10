@@ -5,7 +5,7 @@ namespace window_resolution {
 enum { width = 800, height = 600 };
 }
 namespace pixel_size {
-enum { side = 16 };
+enum { side = 8 };
 }
 
 namespace matrix {

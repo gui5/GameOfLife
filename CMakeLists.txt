@@ -17,7 +17,7 @@ find_package(OpenGL REQUIRED)
 
 find_package(SFML COMPONENTS REQUIRED system window graphics network audio)
 
-add_executable(gof src/main.cpp include/fps.hpp)
+add_executable(gof src/main.cpp include/fps.hpp include/GenerationMachine.hpp)
 target_include_directories(gof PRIVATE "include")
 
 set_target_properties(gof PROPERTIES
