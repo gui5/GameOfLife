@@ -4,33 +4,26 @@
 #include <SFML/System.hpp>
 #include <cstdint>
 
-class Fps
-{
+class Fps {
 public:
-    Fps() : _frame(0),
-            _fps(0) {}
+  Fps() : _frame(0), _fps(0) {}
 
-    const uint64_t get_fps(void) const
-    {
-        return _fps;
+  const uint64_t get_fps(void) const { return _fps; }
+
+  void update(void) {
+    if (_clock.getElapsedTime().asSeconds() >= 1.f) {
+      _fps = _frame;
+      _frame = 0;
+      _clock.restart();
     }
 
-    void update(void)
-    {
-        if (_clock.getElapsedTime().asSeconds() >= 1.f)
-        {
-            _fps = _frame;
-            _frame = 0;
-            _clock.restart();
-        }
-
-        ++_frame;
-    }
+    ++_frame;
+  }
 
 private:
-    uint64_t _frame;
-    uint64_t _fps;
-    sf::Clock _clock;
+  uint64_t _frame;
+  uint64_t _fps;
+  sf::Clock _clock;
 };
 
 #endif
