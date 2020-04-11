@@ -14,7 +14,6 @@ struct CellFactory {
   static PCellArray<width, height> initialize(Seed &&seed) {
     PCellArray<width, height> cells;
     RamdomCellSateArray<width, height> sd;
-    // memset(&sd, 0, sizeof(sd));
     if (seed.generate_seed<width, height>(sd)) {
       for (unsigned i = 0; i < width; i++) {
         for (unsigned j = 0; j < height; j++) {

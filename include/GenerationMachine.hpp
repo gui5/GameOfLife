@@ -36,7 +36,7 @@ private:
   void generation_loop(void) {
     _run = true;
     while (_run) {
-      std::this_thread::sleep_for(std::chrono::milliseconds(100));
+      std::this_thread::sleep_for(std::chrono::milliseconds(1000));
       Seed().generate_seed<matrix::x_lenght, matrix::y_lenght>(_seed);
       for (int i = 0; i < matrix::x_lenght; i++) {
         for (int j = 0; j < matrix::y_lenght; j++) {

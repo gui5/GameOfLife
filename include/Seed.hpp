@@ -13,9 +13,10 @@ template <int width, int height>
 using RamdomCellSateArray = std::array<std::array<CellState, height>, width>;
 
 struct Seed {
-  struct timespec ts;
+
   template <int width = 0, int height = 0>
   bool generate_seed(RamdomCellSateArray<width, height> &rcsa) {
+    struct timespec ts;
     for (int w = 0; w < width; w++) {
       for (int h = 0; h < height; h++) {
         clock_gettime(CLOCK_MONOTONIC_RAW, &ts);
