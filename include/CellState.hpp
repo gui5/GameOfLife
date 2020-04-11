@@ -35,9 +35,7 @@ sf::Color color_state(CellState state) {
   default:
     break;
   }
-  return sf::Color::Yellow;
+  return sf::Color::White;
 }
-
-enum class Trigger { live, die };
 
 #endif
