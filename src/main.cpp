@@ -28,6 +28,8 @@ int main(int argc, char **argv) noexcept {
 
       case sf::Event::MouseButtonPressed:
         if (event.mouseButton.button == sf::Mouse::Left) {
+          gm.reset();
+          printf("State reset!\n");
         }
         break;
 
