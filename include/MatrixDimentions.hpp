@@ -2,7 +2,7 @@
 #define __MATDIMS__
 
 namespace window_resolution {
-enum { width = 800, height = 600 };
+enum { width = 1024, height = 768 };
 }
 namespace pixel_size {
 enum { side = 8 };

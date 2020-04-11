@@ -1,3 +1,3 @@
-SeedTest 10 0.00407637
-CellFactoryTest 8 0.0212053
+SeedTest 15 0.00267118
+CellFactoryTest 16 0.00332558
 ---
