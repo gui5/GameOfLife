@@ -1,9 +1,8 @@
 #include <CellFactory.hpp>
 #include <GenerationMachine.hpp>
-#include <MatrixDimentions.hpp>
 #include <SFML/Graphics.hpp>
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv) noexcept {
 
   sf::RenderWindow window(
       sf::VideoMode(window_resolution::width, window_resolution::height),
@@ -11,8 +10,7 @@ int main(int argc, char **argv) {
 
   window.setVerticalSyncEnabled(true);
 
-  auto cells =
-      CellFactory::initialize<matrix::x_lenght, matrix::y_lenght>(Seed());
+  auto cells = CellFactory::initialize(Seed());
   GenerationMachine gm(cells);
 
   gm.start();
@@ -20,16 +18,28 @@ int main(int argc, char **argv) {
   while (window.isOpen()) {
     sf::Event event;
     while (window.pollEvent(event)) {
-      if (event.type == sf::Event::Closed) {
+      switch (event.type) {
+
+      case sf::Event::Closed:
         gm.stop();
+        gm.join();
         window.close();
+        break;
+
+      case sf::Event::MouseButtonPressed:
+        if (event.mouseButton.button == sf::Mouse::Left) {
+        }
+        break;
+
+      default:
+        break;
       }
     }
 
     window.clear();
 
-    for (auto &wc : cells) {
-      for (auto &hc : wc) {
+    for (const auto &wc : cells) {
+      for (const auto &hc : wc) {
         window.draw(hc->pixel);
       }
     }

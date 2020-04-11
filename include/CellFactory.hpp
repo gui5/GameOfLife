@@ -4,25 +4,20 @@
 #include "Cell.hpp"
 #include "Seed.hpp"
 
-#include <array>
-#include <cstring>
-#include <memory>
 
 struct CellFactory {
 
-  template <int width, int height>
-  static PCellArray<width, height> initialize(Seed &&seed) {
-    PCellArray<width, height> cells;
-    RamdomCellSateArray<width, height> sd;
-    // memset(&sd, 0, sizeof(sd));
-    if (seed.generate_seed<width, height>(sd)) {
-      for (unsigned i = 0; i < width; i++) {
-        for (unsigned j = 0; j < height; j++) {
+  static PCellArray<> initialize(Seed &&seed) {
+    PCellArray<> cells;
+    CellStateArray<> sd;
+    if (seed.generate_seed(sd)) {
+      for (unsigned i = 0; i < matrix::x_lenght; i++) {
+        for (unsigned j = 0; j < matrix::y_lenght; j++) {
           cells[i][j] = std::make_unique<Cell>(CellPosition(i, j), sd[i][j]);
         }
       }
     }
-    return cells;
+    return std::move(cells);
   }
 
   CellFactory(const CellFactory &) = delete;

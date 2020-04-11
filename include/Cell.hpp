@@ -3,9 +3,14 @@
 
 #include "CellState.hpp"
 #include "MatrixDimentions.hpp"
+
 #include <SFML/Graphics.hpp>
-#include <array>
-#include <vector>
+
+struct Cell;
+using PCell = std::unique_ptr<Cell>;
+
+template <int width = matrix::x_lenght, int height = matrix::y_lenght>
+using PCellArray = std::array<std::array<PCell, height>, width>;
 
 template <int axis_size> constexpr int sanitize_coordinate(int input_pos) {
   if (input_pos < 0) {
@@ -14,7 +19,6 @@ template <int axis_size> constexpr int sanitize_coordinate(int input_pos) {
   if (input_pos >= axis_size) {
     return 0;
   }
-
   return input_pos;
 }
 
@@ -69,10 +73,14 @@ struct Cell {
     state = st;
     pixel.setFillColor(color_state(state));
   }
+
+  int get_neighbours_sum(PCellArray<> &cells) {
+    int sum = state == CellState::alive ? 1 : 0;
+    for (const auto &nb : npos) {
+      sum += (cells[nb.x][nb.y])->state == CellState::alive ? 1 : 0;
+    }
+    return sum;
+  }
 };
 
-using PCell = std::unique_ptr<Cell>;
-
-template <int width, int height>
-using PCellArray = std::array<std::array<PCell, height>, width>;
 #endif
